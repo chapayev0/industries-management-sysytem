@@ -16,7 +16,7 @@ namespace industries_management_sysytem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new login_frm());
         }
     }
 }

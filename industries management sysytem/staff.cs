@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace industries_management_sysytem
 {
-    public partial class Form1 : Form
+    public partial class staff : UserControl
     {
-        public Form1()
+        public staff()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

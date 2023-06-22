@@ -1,4 +1,5 @@
 ﻿using industries_management_sysytem.Includes;
+using MySqlX.XDevAPI.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,12 +20,27 @@ namespace industries_management_sysytem
             InitializeComponent();
         }
 
+
+
         SQLConfig config = new SQLConfig();
         usableFunction funct = new usableFunction();
         string sql;
 
         private void button2_Click(object sender, EventArgs e)
+
         {
+
+            users_control1.BringToFront();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+
+        {
+
+            Console.WriteLine("codefdejnrf");
+
+            users_control1.SendToBack();
 
         }
 
@@ -43,10 +59,6 @@ namespace industries_management_sysytem
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void users_control1_Load(object sender, EventArgs e)
         {
@@ -62,21 +74,101 @@ namespace industries_management_sysytem
                 users_control1.btn_update.Enabled = false;
                 users_control1.btn_delete.Enabled = false;
                 users_control1.btn_saveuser.Enabled = true;
+
+                
             }
             else
             {
                 users_control1.btn_saveuser.Enabled = false;
                 users_control1.btn_update.Enabled = true;
                 users_control1.btn_delete.Enabled = true;
+
             }
 
             funct.clearTxt(users_control1.Panel1);
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void staff_control1_Load(object sender, EventArgs e)
+        {
+
+            staff_control1.lbl_id.Text = "id";
+            staff_control1.cbo_type.Text = "Administrator";
+
+            config.Load_DTG("Select emp_id as 'EMP ID' ,staff_name as 'Name',birth_day as 'Birth Day',address as 'Address', gender as 'Gender', nic as 'NIC', contact as 'Contact', staff_section as 'Section' From staff_table", staff_control1.dtg_listUser);
+            staff_control1.dtg_listUser.Columns[0].Visible = true;
+
+            if (staff_control1.lbl_id.Text == "id")
+            {
+                staff_control1.btn_update.Enabled = false;
+                staff_control1.btn_delete.Enabled = false;
+                staff_control1.btn_saveuser.Enabled = true;
+            }
+            else
+            {
+                staff_control1.btn_saveuser.Enabled = false;
+                staff_control1.btn_update.Enabled = true;
+                staff_control1.btn_delete.Enabled = true;
+            }
+
+            funct.clearTxt(staff_control1.Panel1);
+
+        }
+
+            private void pictureBox5_Click(object sender, EventArgs e)
         {
             this.Close();
-            
+
+
+
+        }
+
+        private void dashboard_Load(object sender, EventArgs e)
+
+        {
+
+            Console.WriteLine("dash load");
+
+            string result;
+            result = config.data;
+
+            Console.WriteLine(result);
+
+            if (result == "System Admin")
+
+
+            {
+
+                dash_title.Text = "Administrator Dashboard";
+ 
+                users_control1.BringToFront();
+
+
+            }
+            else if (result == "HR Admin")
+
+            {
+
+                dash_title.Text = "Human Resource Dashboard";
+
+
+                staff_control1.BringToFront();
+
+            }
+            else if (result == "Recption Admin")
+            {
+
+ 
+                staff_control1.BringToFront();
+
+            }
+            else if (result == "Store Admin")
+            {
+
+
+                staff_control1.BringToFront();
+
+            }
+
         }
     }
 }

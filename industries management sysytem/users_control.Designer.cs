@@ -106,13 +106,15 @@
             this.cbo_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_type.FormattingEnabled = true;
             this.cbo_type.Items.AddRange(new object[] {
-            "Administrator",
-            "Staff"});
+            "System Admin",
+            "HR Admin",
+            "Recption Admin",
+            "Store Admin"});
             this.cbo_type.Location = new System.Drawing.Point(243, 116);
             this.cbo_type.Name = "cbo_type";
             this.cbo_type.Size = new System.Drawing.Size(280, 24);
             this.cbo_type.TabIndex = 4;
-            this.cbo_type.Text = "Administrator";
+            this.cbo_type.Text = "System Admin";
             // 
             // Label1
             // 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using industries_management_sysytem.Includes;
 
 namespace industries_management_sysytem
@@ -41,15 +42,16 @@ namespace industries_management_sysytem
         }
 
         private void login_btn_Click(object sender, EventArgs e)
+
         {
             sql = " SELECT* FROM user WHERE user_name = '" + usr_txt.Text + "' and pass = sha1('" + passw_txt.Text + "')";
-            config.singleResult(sql);
-            if (config.dt.Rows.Count > 0)
+            config.sql_data_return(sql);
+            string result = config.data;
 
+            if (result != "") {
 
-            {
-                // Create an instance of the new form
                 dashboard form2 = new dashboard();
+
 
                 // Show the new form
 
@@ -59,10 +61,11 @@ namespace industries_management_sysytem
             }
             else
             {
-                MessageBox.Show("Account does not exist! Please contact administrator.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("User account not found! Contact Administrator");
             }
-            
-            
+
+
+
         }
 
         private void usr_txt_TextChanged(object sender, EventArgs e)

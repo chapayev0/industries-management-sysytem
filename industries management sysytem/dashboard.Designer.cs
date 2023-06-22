@@ -40,7 +40,7 @@
             this.user_log_name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dash_title = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -48,6 +48,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.staff_control1 = new industries_management_sysytem.staff_control();
             this.users_control1 = new industries_management_sysytem.users_control();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -113,7 +114,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button2_Click);
+            this.button3.Click += new System.EventHandler(this.button1_Click);
             // 
             // button1
             // 
@@ -131,7 +132,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button2_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -203,17 +204,17 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+      
             // 
-            // label2
+            // dash_title
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(317, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 26);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Admin Dashboard";
+            this.dash_title.AutoSize = true;
+            this.dash_title.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dash_title.Location = new System.Drawing.Point(317, 22);
+            this.dash_title.Name = "dash_title";
+            this.dash_title.Size = new System.Drawing.Size(150, 26);
+            this.dash_title.TabIndex = 4;
+            this.dash_title.Text = "Admin Dashboard";
             // 
             // pictureBox2
             // 
@@ -278,11 +279,19 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.staff_control1);
             this.panel4.Controls.Add(this.users_control1);
             this.panel4.Location = new System.Drawing.Point(177, 161);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(709, 388);
             this.panel4.TabIndex = 9;
+            // 
+            // staff_control1
+            // 
+            this.staff_control1.Location = new System.Drawing.Point(3, 0);
+            this.staff_control1.Name = "staff_control1";
+            this.staff_control1.Size = new System.Drawing.Size(709, 388);
+            this.staff_control1.TabIndex = 10;
             // 
             // users_control1
             // 
@@ -304,7 +313,7 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dash_title);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -312,6 +321,7 @@
             this.Name = "dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.dashboard_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -340,7 +350,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label dash_title;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -351,5 +361,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel4;
         private users_control users_control1;
+        private staff_control staff_control1;
     }
 }

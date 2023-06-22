@@ -17,8 +17,10 @@ namespace industries_management_sysytem.Includes
         private MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=db_inventory;sslMode=none");
         private MySqlCommand cmd;
         private MySqlDataAdapter da;
+        private MySqlDataReader reader;
         public DataTable dt;
         int result;
+        public string data = "";
         usableFunction funct = new usableFunction();
         public void Execute_CUD(string sql, string msg_false, string msg_true)
         {
@@ -94,6 +96,8 @@ namespace industries_management_sysytem.Includes
 
 
             }
+
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -101,6 +105,56 @@ namespace industries_management_sysytem.Includes
             finally
             {
                 da.Dispose();
+                con.Close();
+            }
+
+        }
+
+       
+
+        public void sql_data_return(string sql)
+
+        {
+
+            
+            try
+            {
+                con.Open();
+                cmd = new MySqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = sql;
+
+
+                reader = cmd.ExecuteReader();
+
+                Console.WriteLine("sql fun");
+
+                while (reader.Read())
+                {
+                    // Access data using reader.GetString(), reader.GetInt32(), etc.
+
+
+                    string result = reader.GetString("type");
+
+                    data = result;
+                   
+
+                }
+
+
+                reader.Close();
+
+
+            }
+
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                
                 con.Close();
             }
 
@@ -261,7 +315,9 @@ namespace industries_management_sysytem.Includes
             Execute_Query("UPDATE `tblautonumber` SET `END`=`END`+`INCREMENT` WHERE `DESCRIPTION`='" + id + "'");
         }
 
-
-
+        internal void CalculateSquare(string sql)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

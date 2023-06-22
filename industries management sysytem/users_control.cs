@@ -31,7 +31,7 @@ namespace industries_management_sysytem
             config.Load_DTG("Select user_id as 'ID' ,name as 'Name',user_name as 'Username',type as 'Type' From user", dtg_listUser);
             dtg_listUser.Columns[0].Visible = false;
 
-            if (lbl_id.Text == "id")
+            if (trigger.Text == "id")
             {
                 btn_update.Enabled = false;
                 btn_delete.Enabled = false;

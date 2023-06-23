@@ -86,6 +86,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="customer_control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customer_control.Designer.cs">
+      <DependentUpon>customer_control.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,11 +114,11 @@
     <Compile Include="staff_control.Designer.cs">
       <DependentUpon>staff_control.cs</DependentUpon>
     </Compile>
-    <Compile Include="staff.cs">
+    <Compile Include="item_control.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="staff.Designer.cs">
-      <DependentUpon>staff.cs</DependentUpon>
+    <Compile Include="item_control.Designer.cs">
+      <DependentUpon>item_control.cs</DependentUpon>
     </Compile>
     <Compile Include="users_control.cs">
       <SubType>UserControl</SubType>
@@ -120,8 +126,14 @@
     <Compile Include="users_control.Designer.cs">
       <DependentUpon>users_control.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="customer_control.resx">
+      <DependentUpon>customer_control.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="item_control.resx">
+      <DependentUpon>item_control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login_frm.resx">
       <DependentUpon>login_frm.cs</DependentUpon>

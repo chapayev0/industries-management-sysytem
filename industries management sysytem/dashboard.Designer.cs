@@ -48,6 +48,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.customer_control1 = new industries_management_sysytem.customer_control();
             this.staff_control1 = new industries_management_sysytem.staff_control();
             this.users_control1 = new industries_management_sysytem.users_control();
             this.panel2.SuspendLayout();
@@ -204,7 +205,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-      
             // 
             // dash_title
             // 
@@ -279,12 +279,21 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.customer_control1);
             this.panel4.Controls.Add(this.staff_control1);
             this.panel4.Controls.Add(this.users_control1);
             this.panel4.Location = new System.Drawing.Point(177, 161);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(709, 388);
             this.panel4.TabIndex = 9;
+            // 
+            // customer_control1
+            // 
+            this.customer_control1.Location = new System.Drawing.Point(0, 0);
+            this.customer_control1.Name = "customer_control1";
+            this.customer_control1.Size = new System.Drawing.Size(709, 388);
+            this.customer_control1.TabIndex = 10;
+            this.customer_control1.Load += new System.EventHandler(this.customer_control1_Load);
             // 
             // staff_control1
             // 
@@ -362,5 +371,6 @@
         private System.Windows.Forms.Panel panel4;
         private users_control users_control1;
         private staff_control staff_control1;
+        private customer_control customer_control1;
     }
 }

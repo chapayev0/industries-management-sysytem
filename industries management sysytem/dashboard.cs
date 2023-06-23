@@ -170,5 +170,30 @@ namespace industries_management_sysytem
             }
 
         }
+
+        private void customer_control1_Load(object sender, EventArgs e)
+        {
+
+            customer_control1.lbl_id.Text = "id";
+
+
+            config.Load_DTG("Select customer_id as 'Customer ID' ,name as 'Name',contact as 'Contact', address as 'Address',vat_num as 'VAT/SVAT Number' From customer_table", customer_control1.dtg_listUser);
+            customer_control1.dtg_listUser.Columns[0].Visible = true;
+
+            if (customer_control1.lbl_id.Text == "id")
+            {
+                customer_control1.btn_update.Enabled = false;
+                customer_control1.btn_delete.Enabled = false;
+                customer_control1.btn_saveuser.Enabled = true;
+            }
+            else
+            {
+                customer_control1.btn_saveuser.Enabled = false;
+                customer_control1.btn_update.Enabled = true;
+                customer_control1.btn_delete.Enabled = true;
+            }
+
+            funct.clearTxt(customer_control1.Panel1);
+        }
     }
 }

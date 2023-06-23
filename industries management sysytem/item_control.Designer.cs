@@ -58,14 +58,17 @@
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.dtglist = new System.Windows.Forms.DataGridView();
             this.btnadd = new System.Windows.Forms.Button();
+            this.barcode_box = new System.Windows.Forms.PictureBox();
             this.pnl_stockmaster.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtglist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barcode_box)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_stockmaster
             // 
             this.pnl_stockmaster.BackColor = System.Drawing.Color.White;
+            this.pnl_stockmaster.Controls.Add(this.barcode_box);
             this.pnl_stockmaster.Controls.Add(this.txtitemid);
             this.pnl_stockmaster.Controls.Add(this.Label8);
             this.pnl_stockmaster.Controls.Add(this.cbounit);
@@ -111,7 +114,7 @@
             this.cbounit.Items.AddRange(new object[] {
             "Metre",
             "Pcs."});
-            this.cbounit.Location = new System.Drawing.Point(606, 117);
+            this.cbounit.Location = new System.Drawing.Point(606, 121);
             this.cbounit.Name = "cbounit";
             this.cbounit.Size = new System.Drawing.Size(87, 21);
             this.cbounit.TabIndex = 6;
@@ -121,7 +124,7 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(373, 121);
+            this.Label7.Location = new System.Drawing.Point(373, 125);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(75, 16);
             this.Label7.TabIndex = 5;
@@ -130,7 +133,7 @@
             // txtqty
             // 
             this.txtqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtqty.Location = new System.Drawing.Point(443, 118);
+            this.txtqty.Location = new System.Drawing.Point(443, 122);
             this.txtqty.Name = "txtqty";
             this.txtqty.Size = new System.Drawing.Size(153, 22);
             this.txtqty.TabIndex = 4;
@@ -148,7 +151,7 @@
             // 
             this.cbotype.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbotype.FormattingEnabled = true;
-            this.cbotype.Location = new System.Drawing.Point(441, 46);
+            this.cbotype.Location = new System.Drawing.Point(441, 60);
             this.cbotype.Name = "cbotype";
             this.cbotype.Size = new System.Drawing.Size(252, 24);
             this.cbotype.TabIndex = 2;
@@ -166,7 +169,7 @@
             // 
             this.Label4.AutoSize = true;
             this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.Location = new System.Drawing.Point(392, 86);
+            this.Label4.Location = new System.Drawing.Point(392, 96);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(55, 16);
             this.Label4.TabIndex = 1;
@@ -176,7 +179,7 @@
             // 
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(368, 49);
+            this.Label3.Location = new System.Drawing.Point(368, 64);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(82, 16);
             this.Label3.TabIndex = 1;
@@ -185,7 +188,7 @@
             // txtprice
             // 
             this.txtprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprice.Location = new System.Drawing.Point(443, 83);
+            this.txtprice.Location = new System.Drawing.Point(443, 93);
             this.txtprice.Name = "txtprice";
             this.txtprice.Size = new System.Drawing.Size(250, 22);
             this.txtprice.TabIndex = 0;
@@ -391,6 +394,15 @@
             this.btnadd.Text = "button2";
             this.btnadd.UseVisualStyleBackColor = true;
             // 
+            // barcode_box
+            // 
+            this.barcode_box.Location = new System.Drawing.Point(440, 7);
+            this.barcode_box.Name = "barcode_box";
+            this.barcode_box.Size = new System.Drawing.Size(252, 48);
+            this.barcode_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.barcode_box.TabIndex = 9;
+            this.barcode_box.TabStop = false;
+            // 
             // item_control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -418,6 +430,7 @@
             this.pnl_stockmaster.PerformLayout();
             this.GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtglist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barcode_box)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,5 +468,6 @@
         internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.DataGridView dtglist;
         private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.PictureBox barcode_box;
     }
 }

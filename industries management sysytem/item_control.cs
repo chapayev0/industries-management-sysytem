@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 using System.Xml.Linq;
 using industries_management_sysytem.Includes;
+using ZXing;
 
 namespace industries_management_sysytem
 {
@@ -130,9 +131,14 @@ namespace industries_management_sysytem
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            sql = "UPDATE tblitems SET `NAME`='" + txtname.Text + "', `DESCRIPTION`='" + txtdescription.Text + "', `TYPE`='" + cbotype.Text + "', `PRICE`='" + txtprice.Text + "'" +
-           ",`UNIT`='" + cbounit.Text + "' WHERE ITEMID='" + txtitemid.Text + "'";
-            config.Execute_CUD(sql, "Error to update", "Data has been updated in the database");
+
+            sql = "update tblitems set NAME = '" + txtname.Text + "',DESCRIPTION= '" + txtdescription.Text
+                          + "',UNIT= '" + cbounit.Text + "' where ITEMID = " + txtitemid.Text;
+
+            config.Execute_CUD(sql, "Unable to update", "Data has been updated in the database.");
+            
+
+     
             btnnew_Click(sender, e);
         }
 
@@ -142,6 +148,26 @@ namespace industries_management_sysytem
             sql = "DELETE FROM tblitems WHERE ITEMID='" + dtglist.CurrentRow.Cells[0].Value + "'";
             config.Execute_CUD(sql, "error to delete", "Data has been deleted.");
             btnnew_Click(sender, e);
+        }
+
+        // Generate barcode method
+        public Bitmap GenerateBarcode(string content)
+        {
+            BarcodeWriter barcodeWriter = new BarcodeWriter
+            {
+                Format = BarcodeFormat.CODE_128, 
+                Options = new ZXing.Common.EncodingOptions
+                {
+                    Width = 300, 
+                    Height = 100, 
+                    Margin = 10 
+                }
+            };
+
+            // Generate the barcode image
+            var barcodeBitmap = barcodeWriter.Write(content);
+
+            return barcodeBitmap;
         }
 
         private void dtglist_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -155,10 +181,16 @@ namespace industries_management_sysytem
                 txtdescription.Text = config.dt.Rows[0].Field<string>("DESCRIPTION");
                 txtprice.Text = config.dt.Rows[0].Field<double>("PRICE").ToString();
                 cbotype.Text = config.dt.Rows[0].Field<string>("TYPE");
-                //txtqty.Text = config.dt.Rows[0].Field<int>("QTY").ToString();
-                //cbounit.Text = config.dt.Rows[0].Field<string>("UNIT");
+
+
+                Bitmap barcodeBitmap = GenerateBarcode(txtitemid.Text );
+
+                barcode_box.Image = barcodeBitmap;
+
             }
         }
+
+
 
         private void btnfirst_Click(object sender, EventArgs e)
         {

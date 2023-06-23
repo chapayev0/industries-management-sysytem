@@ -51,6 +51,7 @@
             this.customer_control1 = new industries_management_sysytem.customer_control();
             this.staff_control1 = new industries_management_sysytem.staff_control();
             this.users_control1 = new industries_management_sysytem.users_control();
+            this.item_control1 = new industries_management_sysytem.item_control();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -279,6 +280,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.item_control1);
             this.panel4.Controls.Add(this.customer_control1);
             this.panel4.Controls.Add(this.staff_control1);
             this.panel4.Controls.Add(this.users_control1);
@@ -309,6 +311,13 @@
             this.users_control1.Size = new System.Drawing.Size(709, 388);
             this.users_control1.TabIndex = 0;
             this.users_control1.Load += new System.EventHandler(this.users_control1_Load);
+            // 
+            // item_control1
+            // 
+            this.item_control1.Location = new System.Drawing.Point(3, 0);
+            this.item_control1.Name = "item_control1";
+            this.item_control1.Size = new System.Drawing.Size(709, 388);
+            this.item_control1.TabIndex = 10;
             // 
             // dashboard
             // 
@@ -372,5 +381,6 @@
         private users_control users_control1;
         private staff_control staff_control1;
         private customer_control customer_control1;
+        private item_control item_control1;
     }
 }

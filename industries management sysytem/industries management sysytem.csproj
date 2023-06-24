@@ -126,12 +126,6 @@
     <Compile Include="item_control.Designer.cs">
       <DependentUpon>item_control.cs</DependentUpon>
     </Compile>
-    <Compile Include="oder_control.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="oder_control.Designer.cs">
-      <DependentUpon>oder_control.cs</DependentUpon>
-    </Compile>
     <Compile Include="stock_control.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,9 +173,6 @@
     </Compile>
     <EmbeddedResource Include="staff_control.resx">
       <DependentUpon>staff_control.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="oder_control.resx">
-      <DependentUpon>oder_control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="stock_control.resx">
       <DependentUpon>stock_control.cs</DependentUpon>

@@ -128,48 +128,6 @@ namespace industries_management_sysytem
 
         {
 
-            Console.WriteLine("dash load");
-
-            string result;
-            result = config.data;
-
-            Console.WriteLine(result);
-
-            if (result == "System Admin")
-
-
-            {
-
-                dash_title.Text = "Administrator Dashboard";
- 
-                users_control1.BringToFront();
-
-
-            }
-            else if (result == "HR Admin")
-
-            {
-
-                dash_title.Text = "Human Resource Dashboard";
-
-
-                staff_control1.BringToFront();
-
-            }
-            else if (result == "Recption Admin")
-            {
-
- 
-                staff_control1.BringToFront();
-
-            }
-            else if (result == "Store Admin")
-            {
-
-
-                staff_control1.BringToFront();
-
-            }
 
         }
 
@@ -198,10 +156,104 @@ namespace industries_management_sysytem
             funct.clearTxt(customer_control1.Panel1);
         }
 
-        public void enabled_menu()
+        public void enabled_menu(string type)
         {
 
-            Console.WriteLine("function work");
+            
+
+            if (type == "System Admin")
+            {
+                Console.WriteLine("data recieved" + type);
+
+                users_control users_control1 = new users_control();
+                users_control1.BringToFront();
+                dash_title.Text = "Sysytem Administrator Dashboard";
+
+            }
+            else if (type == "HR Admin")
+            {
+                staff_control1.BringToFront();
+                dash_title.Text = "HR Administrator Dashboard";
+
+            }else if(type == "Recption Admin")
+            {
+                customer_control1.BringToFront();
+                dash_title.Text = "HR Section Dashboard";
+
+            }else if(type == "Store Admin")
+            {
+                item_control1.BringToFront();
+                dash_title.Text = "Store Section Dashboard";
+            }
+            
+
+        }
+
+        private void login_btn_Click(object sender, EventArgs e)
+        {
+           
+
+
+        }
+
+        private void users_control1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_btn_Click_1(object sender, EventArgs e)
+        {
+
+            sql = " SELECT* FROM user WHERE user_name = '" + user_txt.Text + "' and pass = sha1('" + pass_txt.Text + "')";
+
+            //config.sql_data_return(sql);
+
+            config.singleResult(sql);
+
+            if (config.dt.Rows.Count > 0)
+            {
+
+                string data = config.dt.Rows[0].Field<string>("type").ToString();
+                string name = config.dt.Rows[0].Field<string>("name").ToString();
+                user_log_name.Text = name;
+
+                if (data == "System Admin")
+                {
+
+                    
+                    Console.WriteLine("data recieved" + data);
+                    users_control1.BringToFront();
+                    dash_title.Text = "Sysytem Administrator Dashboard";
+
+                }
+                else if (data == "HR Admin")
+                {
+                    
+                    staff_control1.BringToFront();
+                    dash_title.Text = "HR Administrator Dashboard";
+
+                }
+                else if (data == "Recption Admin")
+                {
+                    
+                    customer_control1.BringToFront();
+                    dash_title.Text = "HR Section Dashboard";
+
+                }
+                else if (data == "Store Admin")
+                {
+                    
+                    item_control1.BringToFront();
+                    dash_title.Text = "Store Section Dashboard";
+                }
+            }else
+            {
+                user_log_name.Text = "LogIn";
+                MessageBox.Show("Account does not exist! Please contact administrator.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
 
         }
     }

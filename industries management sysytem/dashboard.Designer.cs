@@ -48,13 +48,16 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.login_btn = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.pass_txt = new System.Windows.Forms.TextBox();
+            this.user_txt = new System.Windows.Forms.TextBox();
+            this.staff_control1 = new industries_management_sysytem.staff_control();
+            this.customer_control1 = new industries_management_sysytem.customer_control();
+            this.item_control1 = new industries_management_sysytem.item_control();
             this.stock_control1 = new industries_management_sysytem.stock_control();
             this.userControl11 = new industries_management_sysytem.UserControl1();
-            this.item_control1 = new industries_management_sysytem.item_control();
-            this.customer_control1 = new industries_management_sysytem.customer_control();
-            this.staff_control1 = new industries_management_sysytem.staff_control();
             this.users_control1 = new industries_management_sysytem.users_control();
-            this.userControl21 = new industries_management_sysytem.UserControl2();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -183,11 +186,12 @@
             this.user_log_name.AutoSize = true;
             this.user_log_name.Font = new System.Drawing.Font("Poppins SemiBold", 11F, System.Drawing.FontStyle.Bold);
             this.user_log_name.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.user_log_name.Location = new System.Drawing.Point(11, 87);
+            this.user_log_name.Location = new System.Drawing.Point(16, 86);
             this.user_log_name.Name = "user_log_name";
-            this.user_log_name.Size = new System.Drawing.Size(67, 26);
+            this.user_log_name.Size = new System.Drawing.Size(53, 26);
             this.user_log_name.TabIndex = 6;
-            this.user_log_name.Text = "Dilhara";
+            this.user_log_name.Text = "LogIn";
+            this.user_log_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
@@ -283,68 +287,90 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.userControl21);
-            this.panel4.Controls.Add(this.stock_control1);
-            this.panel4.Controls.Add(this.userControl11);
-            this.panel4.Controls.Add(this.item_control1);
-            this.panel4.Controls.Add(this.customer_control1);
-            this.panel4.Controls.Add(this.staff_control1);
-            this.panel4.Controls.Add(this.users_control1);
-            this.panel4.Location = new System.Drawing.Point(177, 161);
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel4.Controls.Add(this.login_btn);
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.pass_txt);
+            this.panel4.Controls.Add(this.user_txt);
+            this.panel4.Location = new System.Drawing.Point(173, 152);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(709, 388);
-            this.panel4.TabIndex = 9;
+            this.panel4.Size = new System.Drawing.Size(717, 388);
+            this.panel4.TabIndex = 15;
             // 
-            // stock_control1
+            // login_btn
             // 
-            this.stock_control1.Location = new System.Drawing.Point(-2, 0);
-            this.stock_control1.Name = "stock_control1";
-            this.stock_control1.Size = new System.Drawing.Size(721, 391);
-            this.stock_control1.TabIndex = 10;
+            this.login_btn.Location = new System.Drawing.Point(362, 226);
+            this.login_btn.Name = "login_btn";
+            this.login_btn.Size = new System.Drawing.Size(75, 23);
+            this.login_btn.TabIndex = 11;
+            this.login_btn.Text = "LogIn";
+            this.login_btn.UseVisualStyleBackColor = true;
+            this.login_btn.Click += new System.EventHandler(this.login_btn_Click_1);
             // 
-            // userControl11
+            // button4
             // 
-            this.userControl11.Location = new System.Drawing.Point(0, 3);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(709, 388);
-            this.userControl11.TabIndex = 11;
+            this.button4.Location = new System.Drawing.Point(281, 226);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Clear";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // item_control1
+            // pass_txt
             // 
-            this.item_control1.Location = new System.Drawing.Point(3, 0);
-            this.item_control1.Name = "item_control1";
-            this.item_control1.Size = new System.Drawing.Size(709, 388);
-            this.item_control1.TabIndex = 10;
+            this.pass_txt.Location = new System.Drawing.Point(271, 179);
+            this.pass_txt.Name = "pass_txt";
+            this.pass_txt.Size = new System.Drawing.Size(174, 20);
+            this.pass_txt.TabIndex = 9;
             // 
-            // customer_control1
+            // user_txt
             // 
-            this.customer_control1.Location = new System.Drawing.Point(0, 0);
-            this.customer_control1.Name = "customer_control1";
-            this.customer_control1.Size = new System.Drawing.Size(709, 388);
-            this.customer_control1.TabIndex = 10;
-            this.customer_control1.Load += new System.EventHandler(this.customer_control1_Load);
+            this.user_txt.Location = new System.Drawing.Point(271, 140);
+            this.user_txt.Name = "user_txt";
+            this.user_txt.Size = new System.Drawing.Size(174, 20);
+            this.user_txt.TabIndex = 8;
             // 
             // staff_control1
             // 
-            this.staff_control1.Location = new System.Drawing.Point(3, 0);
+            this.staff_control1.Location = new System.Drawing.Point(179, 152);
             this.staff_control1.Name = "staff_control1";
             this.staff_control1.Size = new System.Drawing.Size(709, 388);
-            this.staff_control1.TabIndex = 10;
+            this.staff_control1.TabIndex = 14;
+            // 
+            // customer_control1
+            // 
+            this.customer_control1.Location = new System.Drawing.Point(179, 152);
+            this.customer_control1.Name = "customer_control1";
+            this.customer_control1.Size = new System.Drawing.Size(709, 388);
+            this.customer_control1.TabIndex = 13;
+            // 
+            // item_control1
+            // 
+            this.item_control1.Location = new System.Drawing.Point(179, 152);
+            this.item_control1.Name = "item_control1";
+            this.item_control1.Size = new System.Drawing.Size(709, 388);
+            this.item_control1.TabIndex = 12;
+            // 
+            // stock_control1
+            // 
+            this.stock_control1.Location = new System.Drawing.Point(179, 152);
+            this.stock_control1.Name = "stock_control1";
+            this.stock_control1.Size = new System.Drawing.Size(709, 388);
+            this.stock_control1.TabIndex = 11;
+            // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(179, 152);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(709, 388);
+            this.userControl11.TabIndex = 10;
             // 
             // users_control1
             // 
-            this.users_control1.Location = new System.Drawing.Point(3, 3);
+            this.users_control1.Location = new System.Drawing.Point(179, 152);
             this.users_control1.Name = "users_control1";
             this.users_control1.Size = new System.Drawing.Size(709, 388);
-            this.users_control1.TabIndex = 0;
-            this.users_control1.Load += new System.EventHandler(this.users_control1_Load);
-            // 
-            // userControl21
-            // 
-            this.userControl21.Location = new System.Drawing.Point(0, 3);
-            this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(709, 388);
-            this.userControl21.TabIndex = 10;
+            this.users_control1.TabIndex = 9;
             // 
             // dashboard
             // 
@@ -352,6 +378,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 561);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.staff_control1);
+            this.Controls.Add(this.customer_control1);
+            this.Controls.Add(this.item_control1);
+            this.Controls.Add(this.stock_control1);
+            this.Controls.Add(this.userControl11);
+            this.Controls.Add(this.users_control1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox7);
@@ -380,6 +412,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,13 +437,16 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Panel panel4;
         private users_control users_control1;
-        private staff_control staff_control1;
-        private customer_control customer_control1;
-        private item_control item_control1;
         private UserControl1 userControl11;
         private stock_control stock_control1;
-        private UserControl2 userControl21;
+        private item_control item_control1;
+        private customer_control customer_control1;
+        private staff_control staff_control1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button login_btn;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox pass_txt;
+        private System.Windows.Forms.TextBox user_txt;
     }
 }

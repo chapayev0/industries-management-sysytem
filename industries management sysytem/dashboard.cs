@@ -115,7 +115,7 @@ namespace industries_management_sysytem
 
             dash_title.Text = user_type + " Dashboard";
 
-            users_control1.BringToFront();
+            report_control1.BringToFront();
 
         }
 

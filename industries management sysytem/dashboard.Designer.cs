@@ -65,6 +65,7 @@
             this.stock_control1 = new industries_management_sysytem.stock_control();
             this.userControl11 = new industries_management_sysytem.UserControl1();
             this.users_control1 = new industries_management_sysytem.users_control();
+            this.report_control1 = new industries_management_sysytem.report_control();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -399,9 +400,9 @@
             this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.pass_txt);
             this.panel4.Controls.Add(this.user_txt);
-            this.panel4.Location = new System.Drawing.Point(173, 152);
+            this.panel4.Location = new System.Drawing.Point(173, 140);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(717, 388);
+            this.panel4.Size = new System.Drawing.Size(725, 421);
             this.panel4.TabIndex = 15;
             // 
             // login_btn
@@ -493,11 +494,19 @@
             this.users_control1.Size = new System.Drawing.Size(709, 388);
             this.users_control1.TabIndex = 9;
             // 
+            // report_control1
+            // 
+            this.report_control1.Location = new System.Drawing.Point(175, 140);
+            this.report_control1.Name = "report_control1";
+            this.report_control1.Size = new System.Drawing.Size(709, 420);
+            this.report_control1.TabIndex = 17;
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 561);
+            this.Controls.Add(this.report_control1);
             this.Controls.Add(this.lbl_date);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.staff_control1);
@@ -577,5 +586,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label lbl_date;
         private System.Windows.Forms.Timer timer1;
+        private report_control report_control1;
     }
 }

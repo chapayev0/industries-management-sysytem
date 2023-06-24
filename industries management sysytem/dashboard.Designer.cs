@@ -496,9 +496,9 @@
             // 
             // report_control1
             // 
-            this.report_control1.Location = new System.Drawing.Point(175, 140);
+            this.report_control1.Location = new System.Drawing.Point(175, 152);
             this.report_control1.Name = "report_control1";
-            this.report_control1.Size = new System.Drawing.Size(709, 420);
+            this.report_control1.Size = new System.Drawing.Size(709, 406);
             this.report_control1.TabIndex = 17;
             // 
             // dashboard

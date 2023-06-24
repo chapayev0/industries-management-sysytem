@@ -37,6 +37,8 @@ namespace industries_management_sysytem
         private Point lastLocation;
 
 
+
+
         private void button1_Click(object sender, EventArgs e)
 
         {
@@ -201,6 +203,16 @@ namespace industries_management_sysytem
 
         {
 
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = false;
+            button7.Enabled = false;
+            button8.Enabled = false;
+            button9.Enabled = false;
+
             panel4.BringToFront();
             timer1.Start();
 
@@ -312,6 +324,15 @@ namespace industries_management_sysytem
                     Console.WriteLine("data recieved" + data);
                     users_control1.BringToFront();
                     dash_title.Text = "Sysytem Administrator Dashboard";
+                    button1.Enabled = true;
+                    button2.Enabled = true;
+                    button3.Enabled = true;
+                    button4.Enabled = true;
+                    button5.Enabled = true;
+                    button6.Enabled = true;
+                    button7.Enabled = true;
+                    button8.Enabled = true;
+                    button9.Enabled = true;
 
                 }
                 else if (data == "HR Admin")
@@ -320,6 +341,16 @@ namespace industries_management_sysytem
                     staff_control1.BringToFront();
                     dash_title.Text = "HR Administrator Dashboard";
 
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                    button3.Enabled = true;
+                    button4.Enabled = false;
+                    button5.Enabled = false;
+                    button6.Enabled = false;
+                    button7.Enabled = false;
+                    button8.Enabled = false;
+                    button9.Enabled = true;
+
                 }
                 else if (data == "Recption Admin")
                 {
@@ -327,15 +358,47 @@ namespace industries_management_sysytem
                     customer_control1.BringToFront();
                     dash_title.Text = "HR Section Dashboard";
 
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                    button4.Enabled = false;
+                    button5.Enabled = true;
+                    button6.Enabled = false;
+                    button7.Enabled = true;
+                    button8.Enabled = false;
+                    button9.Enabled = true;
+
                 }
                 else if (data == "Store Admin")
                 {
                     
                     item_control1.BringToFront();
                     dash_title.Text = "Store Section Dashboard";
+
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                    button4.Enabled = false;
+                    button5.Enabled = false;
+                    button6.Enabled = true;
+                    button7.Enabled = false;
+                    button8.Enabled = true;
+                    button9.Enabled = true;
                 }
-            }else
-            {
+            }
+            else {
+
+                button1.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button8.Enabled = false;
+                button9.Enabled = false;
+
+
                 user_log_name.Text = "LogIn";
                 login_status = "logout";
                 MessageBox.Show("Account does not exist! Please contact administrator.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);

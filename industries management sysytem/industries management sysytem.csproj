@@ -144,11 +144,11 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="login_control.cs">
+    <Compile Include="UserControl2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="login_control.Designer.cs">
-      <DependentUpon>login_control.cs</DependentUpon>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
     </Compile>
     <Compile Include="users_control.cs">
       <SubType>UserControl</SubType>
@@ -164,9 +164,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="item_control.resx">
       <DependentUpon>item_control.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="login_control.resx">
-      <DependentUpon>login_control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login_frm.resx">
       <DependentUpon>login_frm.cs</DependentUpon>
@@ -191,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="users_control.resx">
       <DependentUpon>users_control.cs</DependentUpon>

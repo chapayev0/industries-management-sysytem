@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 
+
+
 namespace industries_management_sysytem
 {
     public partial class dashboard : Form
@@ -19,6 +21,7 @@ namespace industries_management_sysytem
         public dashboard()
         {
             InitializeComponent();
+            
         }
 
        
@@ -27,22 +30,90 @@ namespace industries_management_sysytem
         SQLConfig config = new SQLConfig();
         usableFunction funct = new usableFunction();
         string sql;
+        string user_type;
+        string login_status;
 
-        private void button2_Click(object sender, EventArgs e)
 
-        {
-
-            users_control1.BringToFront();
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
 
         {
 
+            dash_title.Text = "Store Section Dashboard";
+
+            users_control1.BringToFront();
+
+        }
+        private void button2_Click(object sender, EventArgs e)
+
+        {
+
+            dash_title.Text = "Sysytem Administrator Dashboard";
+
+            users_control1.BringToFront();
+
+        }
+        private void button3_Click(object sender, EventArgs e)
+
+        {
+
+            dash_title.Text = "HR Section Dashboard";
+
+            staff_control1.BringToFront();
+
+        }
+        private void button4_Click(object sender, EventArgs e)
+
+        {
+
             Console.WriteLine("codefdejnrf");
 
-            users_control1.SendToBack();
+            customer_control1.BringToFront();
+
+        }
+        private void button5_Click(object sender, EventArgs e)
+
+        {
+
+            dash_title.Text = "Recipition Section Dashboard";
+
+            customer_control1.BringToFront();
+
+        }
+        private void button6_Click(object sender, EventArgs e)
+
+        {
+
+            dash_title.Text = "Store Section Dashboard";
+
+            item_control1.BringToFront();
+
+        }
+        private void button7_Click(object sender, EventArgs e)
+
+        {
+
+            dash_title.Text = "Reception Section Dashboard";
+
+            userControl11.BringToFront();
+
+        }
+        private void button8_Click(object sender, EventArgs e)
+
+        {
+
+            dash_title.Text = "Store Section Dashboard";
+
+            stock_control1.BringToFront();
+
+        }
+        private void button9_Click(object sender, EventArgs e)
+
+        {
+
+            dash_title.Text = user_type + " Dashboard";
+
+            users_control1.BringToFront();
 
         }
 
@@ -127,6 +198,9 @@ namespace industries_management_sysytem
         private void dashboard_Load(object sender, EventArgs e)
 
         {
+
+            panel4.BringToFront();
+            timer1.Start();
 
 
         }
@@ -216,6 +290,18 @@ namespace industries_management_sysytem
                 string data = config.dt.Rows[0].Field<string>("type").ToString();
                 string name = config.dt.Rows[0].Field<string>("name").ToString();
                 user_log_name.Text = name;
+                user_type = data;
+                login_status = "login";
+                user_txt.Clear();
+                pass_txt.Clear();
+                user_txt.Focus();
+
+
+                pictureBox1.Image = global::industries_management_sysytem.Properties.Resources.female_profile_40px;
+
+
+
+
 
                 if (data == "System Admin")
                 {
@@ -249,9 +335,47 @@ namespace industries_management_sysytem
             }else
             {
                 user_log_name.Text = "LogIn";
+                login_status = "logout";
                 MessageBox.Show("Account does not exist! Please contact administrator.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+
+
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            user_txt.Clear();
+            pass_txt.Clear();
+            user_txt.Focus();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_date.Text = DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            
+            if (login_status == "login")
+            {
+
+                login_status = "logout";
+                Console.WriteLine("picclisk " + login_status);
+                panel4.BringToFront();
+                user_txt.Clear();
+                pass_txt.Clear();
+                user_txt.Focus();
+
+
+                pictureBox1.Image = global::industries_management_sysytem.Properties.Resources.male_user_50px;
+
+
+            }
+
 
 
 

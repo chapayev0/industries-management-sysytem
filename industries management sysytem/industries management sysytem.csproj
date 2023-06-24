@@ -170,6 +170,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="staff_control.resx">
       <DependentUpon>staff_control.cs</DependentUpon>
@@ -199,6 +200,93 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\Add Female User_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\add_graph_report_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\card_payment_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\cheque_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\facebook_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\female_profile_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\female_user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\high_importance_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\home_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\home_208px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\identification_documents_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\linkedin_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\male_user_50dpx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\male_user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\notification_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\Notification_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\open_box_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\Power Off Button_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\question_mark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\question_mark_501px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\settings_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\shopping_cart_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\shutdown_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\twitter_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\User Menu Female_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\user_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assest\user_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

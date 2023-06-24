@@ -33,6 +33,8 @@ namespace industries_management_sysytem
         string user_type;
         string login_status;
 
+        private bool isDragging = false;
+        private Point lastLocation;
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -379,6 +381,36 @@ namespace industries_management_sysytem
 
 
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isDragging = true;
+            lastLocation = e.Location;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X,
+                    (this.Location.Y - lastLocation.Y) + e.Y
+                );
+                this.Update();
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
+            
         }
     }
 }

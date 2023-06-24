@@ -57,14 +57,14 @@
             this.button4 = new System.Windows.Forms.Button();
             this.pass_txt = new System.Windows.Forms.TextBox();
             this.user_txt = new System.Windows.Forms.TextBox();
+            this.lbl_date = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.staff_control1 = new industries_management_sysytem.staff_control();
             this.customer_control1 = new industries_management_sysytem.customer_control();
             this.item_control1 = new industries_management_sysytem.item_control();
             this.stock_control1 = new industries_management_sysytem.stock_control();
             this.userControl11 = new industries_management_sysytem.UserControl1();
             this.users_control1 = new industries_management_sysytem.users_control();
-            this.lbl_date = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -268,8 +268,12 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(171, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(727, 16);
+            this.panel1.Size = new System.Drawing.Size(727, 19);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // panel3
             // 
@@ -434,6 +438,19 @@
             this.user_txt.Size = new System.Drawing.Size(174, 20);
             this.user_txt.TabIndex = 8;
             // 
+            // lbl_date
+            // 
+            this.lbl_date.AutoSize = true;
+            this.lbl_date.Location = new System.Drawing.Point(788, 82);
+            this.lbl_date.Name = "lbl_date";
+            this.lbl_date.Size = new System.Drawing.Size(26, 13);
+            this.lbl_date.TabIndex = 16;
+            this.lbl_date.Text = "time";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // staff_control1
             // 
             this.staff_control1.Location = new System.Drawing.Point(179, 152);
@@ -475,19 +492,6 @@
             this.users_control1.Name = "users_control1";
             this.users_control1.Size = new System.Drawing.Size(709, 388);
             this.users_control1.TabIndex = 9;
-            // 
-            // lbl_date
-            // 
-            this.lbl_date.AutoSize = true;
-            this.lbl_date.Location = new System.Drawing.Point(788, 82);
-            this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(26, 13);
-            this.lbl_date.TabIndex = 16;
-            this.lbl_date.Text = "time";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // dashboard
             // 

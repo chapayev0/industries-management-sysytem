@@ -399,7 +399,7 @@
             this.barcode_box.Location = new System.Drawing.Point(440, 7);
             this.barcode_box.Name = "barcode_box";
             this.barcode_box.Size = new System.Drawing.Size(252, 48);
-            this.barcode_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.barcode_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.barcode_box.TabIndex = 9;
             this.barcode_box.TabStop = false;
             // 

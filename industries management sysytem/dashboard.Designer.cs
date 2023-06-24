@@ -48,10 +48,13 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.stock_control1 = new industries_management_sysytem.stock_control();
+            this.userControl11 = new industries_management_sysytem.UserControl1();
+            this.item_control1 = new industries_management_sysytem.item_control();
             this.customer_control1 = new industries_management_sysytem.customer_control();
             this.staff_control1 = new industries_management_sysytem.staff_control();
             this.users_control1 = new industries_management_sysytem.users_control();
-            this.item_control1 = new industries_management_sysytem.item_control();
+            this.login_control1 = new industries_management_sysytem.login_control();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -280,6 +283,9 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.login_control1);
+            this.panel4.Controls.Add(this.stock_control1);
+            this.panel4.Controls.Add(this.userControl11);
             this.panel4.Controls.Add(this.item_control1);
             this.panel4.Controls.Add(this.customer_control1);
             this.panel4.Controls.Add(this.staff_control1);
@@ -288,6 +294,27 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(709, 388);
             this.panel4.TabIndex = 9;
+            // 
+            // stock_control1
+            // 
+            this.stock_control1.Location = new System.Drawing.Point(-2, 0);
+            this.stock_control1.Name = "stock_control1";
+            this.stock_control1.Size = new System.Drawing.Size(721, 391);
+            this.stock_control1.TabIndex = 10;
+            // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(0, 3);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(709, 388);
+            this.userControl11.TabIndex = 11;
+            // 
+            // item_control1
+            // 
+            this.item_control1.Location = new System.Drawing.Point(3, 0);
+            this.item_control1.Name = "item_control1";
+            this.item_control1.Size = new System.Drawing.Size(709, 388);
+            this.item_control1.TabIndex = 10;
             // 
             // customer_control1
             // 
@@ -312,12 +339,12 @@
             this.users_control1.TabIndex = 0;
             this.users_control1.Load += new System.EventHandler(this.users_control1_Load);
             // 
-            // item_control1
+            // login_control1
             // 
-            this.item_control1.Location = new System.Drawing.Point(3, 0);
-            this.item_control1.Name = "item_control1";
-            this.item_control1.Size = new System.Drawing.Size(709, 388);
-            this.item_control1.TabIndex = 10;
+            this.login_control1.Location = new System.Drawing.Point(0, 0);
+            this.login_control1.Name = "login_control1";
+            this.login_control1.Size = new System.Drawing.Size(709, 388);
+            this.login_control1.TabIndex = 10;
             // 
             // dashboard
             // 
@@ -382,5 +409,8 @@
         private staff_control staff_control1;
         private customer_control customer_control1;
         private item_control item_control1;
+        private UserControl1 userControl11;
+        private stock_control stock_control1;
+        private login_control login_control1;
     }
 }

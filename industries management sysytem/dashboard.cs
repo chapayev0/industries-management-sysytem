@@ -1,4 +1,5 @@
 ﻿using industries_management_sysytem.Includes;
+using industries_management_sysytem.Properties;
 using MySqlX.XDevAPI.Common;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace industries_management_sysytem
             InitializeComponent();
         }
 
+       
 
 
         SQLConfig config = new SQLConfig();
@@ -194,6 +196,13 @@ namespace industries_management_sysytem
             }
 
             funct.clearTxt(customer_control1.Panel1);
+        }
+
+        public void enabled_menu()
+        {
+
+            Console.WriteLine("function work");
+
         }
     }
 }
